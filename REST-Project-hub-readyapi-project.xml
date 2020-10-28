@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<con:soapui-project xmlns:con="http://eviware.com/soapui/config" runType="SEQUENTIAL" abortOnError="false" soapui-version="5.6.0" name="REST Project 7" activeEnvironment="Default" id="fed08a32-5b7c-4b8d-b49a-658efc46c0a4">
+
+
+-<con:settings>
+
+
+-<con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local">
+
+-<![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="RestAPIProject"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="C:\Program Files\SmartBear\SoapUI-5.6.0\bin"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]>
+</con:setting>
+
+</con:settings>
+
+
+-<con:interface name="https://api.github.com" id="d434cac8-d94d-4480-af09-b0044cfa99a7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="rest" xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02">
+
+<con:settings/>
+
+<con:definitionCache type="TEXT" rootPart=""/>
+
+
+-<con:endpoints>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+</con:endpoints>
+
+
+-<con:resource name="Emails" id="328a0cde-48fd-4e54-919b-0c8152fc71d9" path="/user/emails">
+
+<con:settings/>
+
+<con:parameters/>
+
+
+-<con:method name="Emails 1" id="2145e3df-381b-4912-be0c-54aae5d6824a" method="GET">
+
+<con:settings/>
+
+<con:parameters/>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType>application/json; charset=utf-8</con:mediaType>
+
+<con:status>200 201</con:status>
+
+<con:params/>
+
+<con:element>Response</con:element>
+
+</con:representation>
+
+
+-<con:representation type="REQUEST">
+
+<con:mediaType>application/json</con:mediaType>
+
+<con:params/>
+
+</con:representation>
+
+
+-<con:representation type="FAULT">
+
+<con:mediaType>application/json; charset=utf-8</con:mediaType>
+
+<con:status>400 422 401</con:status>
+
+<con:params/>
+
+<con:element xmlns:ema="https://api.github.com/user/emails">ema:Fault</con:element>
+
+</con:representation>
+
+
+-<con:request name="Request 1" id="09565f29-74ae-4e40-b518-88ad5f42b580" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request/>
+
+<con:originalUri>https://api.github.com/user/emails</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shireesha.313@gmail.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+<con:parameters/>
+
+<con:parameterOrder/>
+
+</con:request>
+
+
+-<con:request name="https://api.github.com/user/keys" id="6ccfec9a72596a7adbc57472d78c2b885f00cc6e" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request>{"title":"TestKey","key":"ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVk06MC9OzbyWhS7YTALC08eI+YpzZH0gu9kZLF81Xz08W2AbIk3RwHMlDyURk+Pnc0WWa30OGYFjumETGiaYO78RB8GXz7dzFgZ+PMkrVLw3y69/SbeClLKTrK8ic7IjsSAUiSDjsidEoUNWTL7pFrpL6EL+OyCFX/HzxlyLeRe/K8WT33ST1kEtvpC1+tO1VNil60IdceBNR535AagIYRgo+fBTe3b9iP1s3UIg0QQ4NmfJkmmZlJggluqc+Y/J5x6eltABROEoZF6KkvVhBN0ZWQEDTvC8mpCLhz1vyPi4vFzyryzVMyAGU1U5NmtW5OsdiR96fa5pNDX/0OWKP azuread\shireeshabudida@DESKTOP-CSPMRUB
+","read-only":true } </con:request>
+
+<con:originalUri>https://api.github.com/user/emails</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shireesha.313@gmail.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+<con:parameters/>
+
+<con:parameterOrder/>
+
+</con:request>
+
+</con:method>
+
+</con:resource>
+
+</con:interface>
+
+
+-<con:interface name="https://api.github.com" id="35e95927-8f7c-4919-bc96-971e8f0f514b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="rest" xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02">
+
+<con:settings/>
+
+<con:definitionCache type="TEXT" rootPart=""/>
+
+
+-<con:endpoints>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+</con:endpoints>
+
+
+-<con:resource name="Keys" id="6ccfec9a72596a7adbc57472d78c2b885f00cc6e" path="/user/keys/${id}">
+
+<con:settings/>
+
+
+-<con:parameters>
+
+
+-<con:parameter>
+
+<con:name>id</con:name>
+
+<con:value>0</con:value>
+
+<con:style>HEADER</con:style>
+
+<con:default>0</con:default>
+
+<con:description xsi:nil="true"/>
+
+</con:parameter>
+
+</con:parameters>
+
+
+-<con:method name="Keys 1" id="29f22e86-baef-4723-8f83-dc43655e8ee9" method="DELETE">
+
+<con:settings/>
+
+<con:parameters/>
+
+
+-<con:representation type="FAULT">
+
+<con:mediaType>application/json; charset=utf-8</con:mediaType>
+
+<con:status>401 404</con:status>
+
+<con:params/>
+
+<con:element xmlns:sha2="https://api.github.com/user/keys/SHA256">sha2:Fault</con:element>
+
+</con:representation>
+
+
+-<con:representation type="REQUEST">
+
+<con:mediaType>application/json</con:mediaType>
+
+<con:params/>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType xsi:nil="true"/>
+
+<con:status>204</con:status>
+
+<con:params/>
+
+<con:element>data</con:element>
+
+</con:representation>
+
+
+-<con:request name="Request 1" id="caccbb15-beb3-4190-9f96-aa7bd25506a3" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request/>
+
+<con:originalUri>https://api.github.com/user/keys/SHA256</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shbudipa@in.ibm.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+
+-<con:parameters>
+
+<entry xmlns="http://eviware.com/soapui/config" value="47349081" key="id"/>
+
+</con:parameters>
+
+
+-<con:parameterOrder>
+
+<con:entry>id</con:entry>
+
+</con:parameterOrder>
+
+</con:request>
+
+</con:method>
+
+</con:resource>
+
+</con:interface>
+
+
+-<con:interface name="https://api.github.com" id="eba17911-292e-41cd-9a95-e70dbd9136c9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="rest" xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02">
+
+<con:settings/>
+
+<con:definitionCache type="TEXT" rootPart=""/>
+
+
+-<con:endpoints>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+</con:endpoints>
+
+
+-<con:resource name="Keys" id="6ccfec9a72596a7adbc57472d78c2b885f00cc6e" path="/user/keys">
+
+<con:settings/>
+
+
+-<con:parameters>
+
+
+-<con:parameter>
+
+<con:name>id</con:name>
+
+<con:value/>
+
+<con:style>PLAIN</con:style>
+
+<con:default/>
+
+<con:description xsi:nil="true"/>
+
+</con:parameter>
+
+</con:parameters>
+
+
+-<con:method name="Keys 1" id="33aa8173-653e-4c85-b700-ff597f67ce1d" method="POST">
+
+<con:settings/>
+
+<con:parameters/>
+
+
+-<con:representation type="REQUEST">
+
+<con:mediaType>application/json</con:mediaType>
+
+<con:params/>
+
+</con:representation>
+
+
+-<con:representation type="FAULT">
+
+<con:mediaType>application/json; charset=utf-8</con:mediaType>
+
+<con:status>401 422</con:status>
+
+<con:params/>
+
+<con:element xmlns:keys="https://api.github.com/user/keys">keys:Fault</con:element>
+
+</con:representation>
+
+
+-<con:representation type="RESPONSE">
+
+<con:mediaType>application/json; charset=utf-8</con:mediaType>
+
+<con:status>201</con:status>
+
+<con:params/>
+
+<con:element xmlns:keys="https://api.github.com/user/keys">keys:Response</con:element>
+
+</con:representation>
+
+
+-<con:request name="Request 1" id="b86133ca-2e27-470d-bb6c-cb3179aea5c4" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request>{"title":"TestKey","key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVk06MC9OzbyWhS7YTALC08eI+YpzZH0gu9kZLF81Xz08W2AbIk3RwHMlDyURk+Pnc0WWa30OGYFjumETGiaYO78RB8GXz7dzFgZ+PMkrVLw3y69/SbeClLKTrK8ic7IjsSAUiSDjsidEoUNWTL7pFrpL6EL+OyCFX/HzxlyLeRe/K8WT33ST1kEtvpC1+tO1VNil60IdceBNR535AagIYRgo+fBTe3b9iP1s3UIg0QQ4NmfJkmmZlJggluqc+Y/J5x6eltABROEoZF6KkvVhBN0ZWQEDTvC8mpCLhz1vyPi4vFzyryzVMyAGU1U5NmtW5OsdiR96fa5pNDX/0OWKP azuread\shireeshabudida@DESKTOP-CSPMRUB","read-only":true } </con:request>
+
+<con:originalUri>https://api.github.com/user/keys</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shireesha.313@gmail.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+
+-<con:parameters>
+
+<entry xmlns="http://eviware.com/soapui/config" value="47233977" key="id"/>
+
+</con:parameters>
+
+
+-<con:parameterOrder>
+
+<con:entry>id</con:entry>
+
+</con:parameterOrder>
+
+</con:request>
+
+</con:method>
+
+</con:resource>
+
+</con:interface>
+
+
+-<con:testSuite name="RestAPIProject" id="b0699381-7989-46e8-bab2-a30eaf850e0e">
+
+<con:settings/>
+
+<con:runType>SEQUENTIAL</con:runType>
+
+
+-<con:testCase name="RestAPIPost" id="fc48aa95-bc7c-4d26-814b-d4c9057f94ee" searchProperties="true" maxResults="0" keepSession="false" failTestCaseOnErrors="true" failOnError="true">
+
+<con:settings/>
+
+
+-<con:testStep name="Emails 1 - Request 1" id="a299e949-e3c3-4260-a823-e573695b14c9" type="restrequest">
+
+<con:settings/>
+
+
+-<con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestRequestStep" methodName="Emails 1" resourcePath="/user/emails" service="https://api.github.com">
+
+
+-<con:restRequest name="Emails 1 - Request 1" id="09565f29-74ae-4e40-b518-88ad5f42b580" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request/>
+
+<con:originalUri>https://api.github.com/user/emails</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shireesha.313@gmail.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+<con:parameters/>
+
+<con:parameterOrder/>
+
+</con:restRequest>
+
+</con:config>
+
+</con:testStep>
+
+
+-<con:testStep name="GET request" id="3dce10ac-4e4a-4536-9a13-f06f8309f010" type="restrequest">
+
+<con:settings/>
+
+
+-<con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestRequestStep" methodName="Emails 1" resourcePath="/user/emails" service="https://api.github.com">
+
+
+-<con:restRequest name="GET request" id="93f570fe-5a26-442d-9feb-babea6aa8dd9" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request>{"title":"TestKey","key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVk06MC9OzbyWhS7YTALC08eI+YpzZH0gu9kZLF81Xz08W2AbIk3RwHMlDyURk+Pnc0WWa30OGYFjumETGiaYO78RB8GXz7dzFgZ+PMkrVLw3y69/SbeClLKTrK8ic7IjsSAUiSDjsidEoUNWTL7pFrpL6EL+OyCFX/HzxlyLeRe/K8WT33ST1kEtvpC1+tO1VNil60IdceBNR535AagIYRgo+fBTe3b9iP1s3UIg0QQ4NmfJkmmZlJggluqc+Y/J5x6eltABROEoZF6KkvVhBN0ZWQEDTvC8mpCLhz1vyPi4vFzyryzVMyAGU1U5NmtW5OsdiR96fa5pNDX/0OWKP azuread\shireeshabudida@DESKTOP-CSPMRUB","read-only":true } </con:request>
+
+<con:originalUri>https://api.github.com/user/emails</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shireesha.313@gmail.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+<con:parameters/>
+
+<con:parameterOrder/>
+
+</con:restRequest>
+
+</con:config>
+
+</con:testStep>
+
+
+-<con:testStep name="Post SSH KEY" id="4f3f636d-8c04-4a48-a3f5-108ed21c5d15" type="restrequest">
+
+<con:settings/>
+
+
+-<con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestRequestStep" methodName="Keys 1" resourcePath="/user/keys" service="https://api.github.com">
+
+
+-<con:restRequest name="Post SSH KEY" id="b86133ca-2e27-470d-bb6c-cb3179aea5c4" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request>{"title":"TestKey","key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVk06MC9OzbyWhS7YTALC08eI+YpzZH0gu9kZLF81Xz08W2AbIk3RwHMlDyURk+Pnc0WWa30OGYFjumETGiaYO78RB8GXz7dzFgZ+PMkrVLw3y69/SbeClLKTrK8ic7IjsSAUiSDjsidEoUNWTL7pFrpL6EL+OyCFX/HzxlyLeRe/K8WT33ST1kEtvpC1+tO1VNil60IdceBNR535AagIYRgo+fBTe3b9iP1s3UIg0QQ4NmfJkmmZlJggluqc+Y/J5x6eltABROEoZF6KkvVhBN0ZWQEDTvC8mpCLhz1vyPi4vFzyryzVMyAGU1U5NmtW5OsdiR96fa5pNDX/0OWKP azuread\shireeshabudida@DESKTOP-CSPMRUB","read-only":true } </con:request>
+
+<con:originalUri>https://api.github.com/user/keys</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shireesha.313@gmail.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+<con:parameters/>
+
+
+-<con:parameterOrder>
+
+<con:entry>id</con:entry>
+
+</con:parameterOrder>
+
+</con:restRequest>
+
+</con:config>
+
+</con:testStep>
+
+
+-<con:testStep name="Property Transfer from Post to Delete" id="243e8890-c28e-4ca5-9c92-98ecef9522f3" type="transfer">
+
+<con:settings/>
+
+
+-<con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
+
+
+-<con:transfers failOnError="false" entitize="false" transferToAll="true" ignoreEmpty="false" transferChildNodes="true" transferTextContent="false" setNullOnMissingSource="false">
+
+<con:name>KeyID</con:name>
+
+<con:sourceType>Response</con:sourceType>
+
+<con:sourceStep>Post SSH KEY</con:sourceStep>
+
+<con:sourcePath>$['id']</con:sourcePath>
+
+<con:targetType>id</con:targetType>
+
+<con:targetStep>Delete - Request 1</con:targetStep>
+
+<con:type>JSONPATH</con:type>
+
+<con:targetTransferType>JSONPATH</con:targetTransferType>
+
+<con:upgraded>true</con:upgraded>
+
+</con:transfers>
+
+</con:config>
+
+</con:testStep>
+
+
+-<con:testStep name="Delete - Request 1" id="fb1c599f-10ee-43e4-a015-bd9f57bc85c6" type="restrequest">
+
+<con:settings/>
+
+
+-<con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestRequestStep" methodName="Keys 1" resourcePath="/user/keys/${id}" service="https://api.github.com">
+
+
+-<con:restRequest name="Delete - Request 1" id="caccbb15-beb3-4190-9f96-aa7bd25506a3" postQueryString="false" mediaType="application/json">
+
+
+-<con:settings>
+
+<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><xml-fragment/></con:setting>
+
+</con:settings>
+
+<con:endpoint>https://api.github.com</con:endpoint>
+
+<con:request/>
+
+<con:originalUri>https://api.github.com/user/keys/SHA256</con:originalUri>
+
+
+-<con:credentials>
+
+<con:username>shireesha.313@gmail.com</con:username>
+
+<con:password/>
+
+<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+
+<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+
+<con:preemptive>true</con:preemptive>
+
+<con:authType>Preemptive</con:authType>
+
+</con:credentials>
+
+<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+
+<con:jmsPropertyConfig/>
+
+
+-<con:parameters>
+
+<entry xmlns="http://eviware.com/soapui/config" value="47349786" key="id"/>
+
+</con:parameters>
+
+
+-<con:parameterOrder>
+
+<con:entry>id</con:entry>
+
+</con:parameterOrder>
+
+</con:restRequest>
+
+</con:config>
+
+</con:testStep>
+
+<con:properties/>
+
+</con:testCase>
+
+<con:properties/>
+
+</con:testSuite>
+
+<con:properties/>
+
+<con:wssContainer/>
+
+<con:oAuth2ProfileContainer/>
+
+<con:oAuth1ProfileContainer/>
+
+<con:sensitiveInformation/>
+
+</con:soapui-project>
